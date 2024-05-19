@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pooppins", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: end;
+}
+
+.wrapper{
+    width: 20%;
+    height: 100vh;
+    background-color: #003049;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.top-part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 100%;
+}
+
+.top-part h1{
+    pointer-events: none;
+    user-select: none;
+    color: aliceblue;
+    padding-left: 1.125rem;
+    font-weight: 700;
+}
+
+/* MID PART HERE */
+
+.mid-part{
+    height: 60vh;
+    width: 100%;
+    row-gap: .5rem;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonss p img{
+    margin-right: 1.125rem; 
+    width: 1.5rem; 
+    height: 1.5rem;
+}
+
+.buttonss{
+    margin-left: 5%;
+    color: #000000;
+    border-radius: 2.5rem;
+    text-decoration: none;
+    padding: .2rem 1rem;
+    width: 95%;
+    height: 7vh;
+    background-color: #87CEEB;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonss p{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mid-part .active{
+    font-weight: 600;
+    background-color: orange;
+    border-radius: 2.5rem 0 0 2.5rem;
+}
+
+/*END MID PART HERE */
+
+.bottom-part{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logout_icon{
+    width: 1.4rem; 
+    height: 1.4rem;
+}
+.logout {
+    width: 8rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.125rem;
+    color: #e7e5e5;
+    border-radius: 2.5rem;
+    background-color: #000000;
+    transition: .2s;
+    font-weight: 600;
+}
+.logout i{
+    font-size: 1.5rem;
+    padding: 0;
+}
+.logout span{
+    padding-left: .15rem;
+}
+.logout:hover{
+    color: #D62828;
+}
+
+/* Accept applicant */
+.PENDING_PAGE{
+    width: 80%;
+    height: 100vh;
+    overflow: auto;
+    background-color: orange;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.resume_sample{
+    width: 49%;
+    height: 48vh;
+    margin: .5%;
+    border-radius: .125rem;
+    background-color: #87CEEB;
+
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.Information_top_part{
+    padding-top: .1rem;
+    display: flex;
+    justify-content: center;
+    height: 80%;
+}
+.resume_sample p{
+    color: #000000;
+    padding: 0;
+    margin: 0;
+}
+
+.applicant_image{
+    width: 6rem;
+    height: 6rem;
+    margin: .125rem;
+}
+.Inoformation_part{
+    width: 78%;
+    margin: .125rem;
+}
+.decision{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.decision a{
+    font-size: 1.125rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: aliceblue;
+    padding: 1rem 2rem;
+    margin: 1rem 3rem;
+    background-color: #000000;
+    border-radius: 2.5rem;
+    transition: .1s;
+}
+.accepted,
+.rejected{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 49%;
+    height: 15vh;
+}
+.decision .reject:hover{
+    font-size: 1.225rem;
+    color: rgb(255, 30, 30);
+}
+.decision .accept:hover{
+    font-size: 1.225rem;
+    color: rgb(71, 255, 71);
+}
+@media only screen and (max-width: 1100px) {
+    .top-part{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
+        width: 100%;
+    }
+
+    .resume_sample{
+        width: 80%;
+        height: 49vh;
+        margin: .5vh 10%;
+        border-radius: .125rem;
+    
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+    h1{
+        display: none;
+    }
+
+    .buttonss p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buttonss p::before {
+        content: '';
+    }
+
+    .buttonss p {
+        font-size: 0; /* Hide text */
+    }
+
+    .buttonss p img {
+        font-size: initial; /* Ensure image is not affected */
+    }
+
+    .logout p::before{
+        content: '';
+    }
+
+    .logout p{
+        font-size: 0;
+    }
+
+    .resume_sample{
+        width: 95%;
+        height: 60vh;
+        margin: .5vh 2.5%;
+        border-radius: .125rem;
+        background-color: rgba(0, 0, 0, 0.555);
+    
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+    }
+}
+
+/* RESERVE_PAGE */
+body{
+    background-color: orange;
+}
+
+.RESERVE_PAGE{
+    width: 80%;
+    height: 100%;
+    background-color: orange;
+}
+
+.Information_container{
+    width: 75%;
+    height: 99%;
+    margin: .5%;
+    border: 1px solid black;
+    border-right: none;
+    border-bottom: none;
+
+    background-color: #87CEEB;
+}
+
+.Label{
+    margin-bottom: .2vh;
+}
+
+ul{
+    display: flex;
+    width: 100%;
+}
+
+.Applicant_photo{
+    border: 1px solid black;
+    width: 10%;
+    border-top: none;
+    border-left: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Applicant_name{
+    border: 1px solid black;
+    border-left: none;
+    width: 20%;
+    border-top: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Applicant_age{
+    border: 1px solid black;
+    border-left: none;
+    width: 10%;
+    border-top: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Applicant_work{
+    border: 1px solid black;
+    border-left: none;
+    width: 25%;
+    font-size: .9rem;
+    border-top: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Applicant_works{
+    border: 1px solid black;
+    border-left: none;
+    width: 25%;
+    border-top: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Applicant_contact{
+    border: 1px solid black;
+    border-left: none;
+    width: 20%;
+    border-top: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Applicant_view{
+    width: 15%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+ul li{
+    list-style: none;
+}
+
+.reserve_applicant_image{
+    width: 3rem;
+    height: 3rem;   
+}
+
+.view_button{
+    background-color: #24a0ed;
+    padding: 1px solid black;
+    border: none;
+    font-size: 1rem;
+    padding: .5rem 1.5rem;
+    border-radius: .125rem;
+    cursor: pointer;
+}
+
+.view_button:hover{
+    font-weight: bold;
+}
+
+.information_view.active {
+    display: block; /* Example style */
+
+    display: flex;
+}
+
+.information_view {
+    display: none; /* Hide by default */
+    width: 100%;
+    height: 70vh;
+    border: 1px solid black;
+    border-left: none;
+}
+
+.information_view .information_left{
+    width: 50%;
+    height: 100%;
+    background-color: #24a0ed;
+}
+
+.information_view .information_right{
+    width: 50%;
+    height: 100%;
+    background-color: #00ff62;
+}
+
+/*Interview Page*/
+.INTERVIEW_PAGE{
+    width: 80%;
+    height: 100vh;
+    background-color: orange;
+}
+
+/* MONITORING PAGE */
+.MONITORING_PAGE{
+    width: 80%;
+    height: 100vh;
+    background-color: orange;
+}

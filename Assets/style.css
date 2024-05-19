@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pooppins", sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    background: url(../Image/CITYHALL.PNG) no-repeat;
+    background-position: center bottom;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.2);
+    backdrop-filter: blur(20px);
+    z-index: -1;
+}
+
+.logo{
+    font-size: 2rem;
+    color: rgb(255, 136, 0);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a {
+    font-size: 1rem;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+    transition: .2s ease; 
+}
+.navbar a.active {
+    color: orange; /* Change this to your desired active color */
+}
+.navbar a:hover {
+    color: rgb(255, 136, 0);
+}
+#check{
+    display: none;
+}
+
+.icons{
+    position: absolute;
+    font-size: 2.8rem;
+    right: 5%;
+    color: aliceblue;
+    cursor: pointer;
+    display: none;
+}
+
+/*BREAK POINT*/
+@media (max-width: 992px) {
+    .header{padding: 1.3rem 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .icons{display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+
+    .icons #close-icon{
+        display: none;
+    }
+
+    .icons #close-icon{
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: rgba(0,0,0,.2);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 .5rem 1rem  rgba(0, 0, 0, .2);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar{
+        height: 15rem;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(-50);
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar a{
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.10s * var(--i));
+    }
+}
+@media (max-width: 750px) {
+    .content{
+        font-size: small;
+    }
+    .button{
+        background-color: rgb(255, 136, 0);
+        color: aliceblue;
+        padding: .678rem 1rem;
+        font-weight: 500;
+        border-radius: 2.5rem;
+        text-decoration: none;
+    }
+}
+
+/*HOMEPAGE PESO CONTENT DESIGNING */
+.content{
+    font-weight: 300;
+    padding: 2rem;
+    position: absolute;
+    width: 40%;
+    height: 60vh;
+    margin: 10rem 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 1rem;
+
+    background-color: rgba(0,0,0,.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 .5rem 1rem  rgba(0, 0, 0, .2);
+}
+.paragraph .important_p{
+    text-align: start;
+}
+.content h1{
+    color: aliceblue;
+    font-weight: 800;
+}
+.paragraph{
+    width: 100%;
+    font-weight: 100;
+    color: aliceblue;
+}
+
+.button{
+    background-color: #4793AF;
+    color: aliceblue;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    border-radius: 2.5rem;
+    text-decoration: none;
+}
+.button:hover{
+    color: rgb(255, 136, 0);
+}
+
+/*LOG-IN DESIGN */
+.wrapper{
+    width: 26.25rem;
+    background: rgba(0, 0, 0, 0.363);
+    backdrop-filter: blur(20px);
+    border: .125rem solid rgba(0, 0, 0, 0.2);
+    color: aliceblue;
+    border-radius: 0.625rem;
+    padding: 1.875rem 2.5rem;
+}
+
+.wrapper h1{
+    font-size: 2.25rem;
+    color: aliceblue;
+    text-align: center;
+}
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 3.125rem;
+    margin: 1.875rem 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    border: none;
+    outline: none;
+    border: 0.125rem solid rgba(255, 255, 255, 0.2);
+    border-radius: 2.5rem;
+    font-size: 1rem;
+    color: aliceblue;
+    padding: 1.25rem 2.813rem 1.25rem 1.25rem;
+}
+
+.input-box input::placeholder{
+    color: aliceblue;
+}
+
+.input-box i{
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.25rem;
+}
+
+.wrapper .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.906rem;
+    margin: -0.938rem 0 0.938rem;
+}
+
+.remember-forgot label input{
+    accent-color: aliceblue;
+    margin-right: 0.188rem;
+}
+
+.remember-forgot a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.wrapper .btn{
+    width: 100%;
+    height: 2.813rem;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 2.5rem;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.wrapper .register-link{
+    font-size: 0.906rem;
+    text-align: center;
+    margin: 1.25rem 0 2.188rem;
+}
+
+.register-link p a{
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover{
+    text-decoration: underline;
+}

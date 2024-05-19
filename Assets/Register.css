@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Pooppins", sans-serif;
+}
+.Container{
+    width: 26.25rem;
+    background: rgba(0, 0, 0, 0.363);
+    backdrop-filter: blur(20px);
+    border: .125rem solid rgba(0, 0, 0, 0.2);
+    color: aliceblue;
+    border-radius: 0.625rem;
+    padding: 1.875rem 2.5rem;
+}
+
+.Container h1{
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+.Container .input-box{
+    position: relative;
+    width: 100%;
+    height: 3.125rem;
+    margin: 1.875rem 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    backdrop-filter: blur(20px);
+    border: none;
+    outline: none;
+    border: 0.125rem solid rgba(255, 255, 255, 0.2);
+    border-radius: 2.5rem;
+    font-size: 1rem;
+    color: aliceblue;
+    padding: 1.25rem 2.813rem 1.25rem 1.25rem;
+}
+
+.input-box input::placeholder{
+    color: aliceblue;
+}
+
+.input-box i{
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(40%);
+    font-size: 1.25rem;
+}
+
+.input-box img{
+    position: absolute;
+    right: .9rem;
+    top: 30%;
+    transform: translateY(45%);
+    width: 2rem;
+    height: 2rem;
+    filter: invert(100%);
+    border-radius: 2.5rem;
+}
+
+.input-box label{
+    padding-left: 1.125rem;
+    display: flex;
+    justify-content: start;
+    margin-bottom: .2rem;
+}
+
+.Container .btn{
+    width: 100%;
+    height: 2.813rem;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 2.5rem;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+}

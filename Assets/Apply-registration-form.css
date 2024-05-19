@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pooppins", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.2);
+}
+
+.top-part{
+    width: 100%;
+    display: flex;
+}
+
+h1{
+    font-size: 2rem;
+    width: 100%;
+    text-align: left;
+    padding: 1rem 5rem;
+}
+.upload-container {
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.upload-container input[type="file"] {
+    display: none;
+}
+
+.upload-label {
+    width: 30%;
+    height: 3rem;
+    padding: 1rem;
+    border: 1px solid orange;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1rem 1rem 1rem 5rem;
+}
+
+.preview-container {
+    padding-left: 4.5rem    ;
+    width: 100%;
+    height: auto;
+}
+.preview-image {
+    width: 5rem;
+    height: 5rem;
+    background-color: white;
+}
+
+.Container{
+    width: 70%;
+    height: 110vh;
+    background-color: antiquewhite;
+}
+.Container form{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.applicant_name,
+.date_time,
+.email_adress_contact{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.input-box {
+    margin: .5rem;
+    position: relative;
+}
+
+.input-box .input {
+    border-radius: .3rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 18.75rem;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid orange;
+    background-color: antiquewhite;
+}
+
+.input-box .placeholder {
+    position: absolute;
+    top: 1rem;
+    left: 0.5rem;
+    font-size: 0.875rem;
+    padding: 0px 0.313rem;
+    color: #666;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.input-box .placeholder.active {
+    top: -0.7rem;
+    background-color: antiquewhite;
+    padding: .125rem;
+    color: orange;
+}
+
+.work_experience{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    position: relative;
+    margin: 1rem 2.5% 0 2.5%;
+}
+
+.work_experiences{
+    width: 100%; /* Set the width to 100% */
+    height: 20vh; /* Set the desired height */
+    resize: none;
+    font-size: 0.875rem;
+    box-sizing: border-box;
+    outline: none;
+    border: 0.063rem solid orange;
+    border-radius: .4rem;
+    padding: .5rem;
+    background-color: antiquewhite;
+}
+
+.work_experience .Experience{
+    position: absolute;
+    top: 1rem;
+    left: 0.5rem;
+    font-size: 0.875rem;
+    padding: 0px 0.313rem;
+    color: #666;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.work_experience .Experience.active {
+    top: -0.7rem;
+    background-color: antiquewhite;
+    padding: .125rem;
+    color: orange;
+}
+
+.gender{
+    margin: .5rem;
+    padding: 0;
+    width: 12.8rem;
+    height: 7.9vh;
+    text-align: center;
+    border: 1px solid orange;
+    background-color: antiquewhite;
+    border-radius: .3rem;
+    font-size: 0.875rem;
+    outline: none;
+}
+
+.Birth_date{
+    margin: .5rem;
+    width: 12.8rem;
+    height: 7.9vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid orange;
+    outline: none;
+    font-size: 0.875rem;
+    border-radius: .3rem;
+}
+.Birth_date label{
+    color: #666;
+    transition: 0.3s;
+}
+
+.Birth_date .placeholder.active{
+    margin-left: .3rem;
+    padding: 0 .1rem;
+    width: 55%;
+    transform: translateY(-50%);
+    background-color: antiquewhite;
+    color: orange;
+}
+
+.Birth_date input{
+    background-color: antiquewhite;
+    width: 100%;
+    height: 2rem;
+    outline: none;
+    border: none;
+    border-radius: .4rem;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: .875rem;
+    position: relative;
+}
+
+.Birth_date input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    padding-left: 9rem;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 2rem;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.Work_h1{
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: .125rem;
+}
+
+.work_desire{
+    width: 95%;
+    height: 25vh;
+    margin: 0 2.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.available_work{
+    display: flex;
+    flex-wrap: wrap;
+}
+.work_choices{
+    margin: .125rem;
+    width: 24.5%;
+}
+
+.work_choices input{
+    cursor: pointer;
+}
+
+.bottons{
+    width: 100%;
+    height: 5vh;
+    background-color: rgba(100, 149, 237);
+    outline: none;
+    border: 1px solid orange;
+}
+
+.bottons:hover{
+    background-color: rgba(100, 149, 237, .2);
+}
+
+@media only screen and (max-width: 1200px) {
+    .Container{
+        width: 95%;
+        height: 145vh;
+        background-color: antiquewhite;
+    }
+
+    .work_desire{
+        height: 50vh;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .Container{
+        width: 95%;
+        height: 140vh;
+        background-color: antiquewhite;
+    }
+
+    .work_desire{
+        height: 50vh;
+    }
+
+    .upload-label {
+        margin: 1rem;
+        width: 35%;
+    }
+
+    .applicant_name,
+    .date_time,
+    .email_adress_contact{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .work_choices{
+        margin: .125rem;
+        width: 31%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .Container{
+        width: 95%;
+        height: 180vh;
+        background-color: antiquewhite;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Container{
+        width: 100%;
+        height: 220vh;
+        background-color: antiquewhite;
+    }
+
+    .work_desire{
+        height: 50vh;
+    }
+
+    h1{
+        padding: 1rem;
+    }
+
+    .upload-label {
+        margin: 1rem;
+        width: 40%;
+    }
+
+    .applicant_name,
+    .date_time,
+    .email_adress_contact{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .work_choices{
+        margin: .125rem;
+        width: 40%;
+    }
+}
